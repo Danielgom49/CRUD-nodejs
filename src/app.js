@@ -8,11 +8,11 @@ const app = express();
 const customerRoutes = require('./routes/customer.');
 
 // SETTINGS
-app.set('port', process.env.PORT || 3000); // VARIABLE DONDE SE DEFINE LA VARIABLE
+app.set('port', process.env.PORT || 3000); // VARIABLE DONDE SE DEFINE LA VARIABLE DEL PIERTO
 app.set('view engine', 'ejs'); // SE USA EJS COMO MOTOR DE PLANTILLAS
-app.set('views', path.join(__dirname, 'views')) // SE DEFINE EN DONDE SE ENCUENTRA EL ARCHIO VIEWS
+app.set('views', path.join(__dirname, 'views')) // SE DEFINE LA RUTA DEL ARCHIO VIEWS
 
-// MIDLEWARES
+// MIDDLEWARES
 app.use(morgan('dev'));
 app.use(myConnection(mysql, {
     host: 'localhost',
